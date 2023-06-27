@@ -83,7 +83,7 @@
                         </goals>
                         <configuration>
                             <target>
-                                <get src="https://downloads.apache.org/jmeter/binaries/apache-jmeter-${jmeter.version}.zip"
+                                <get src="https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-${jmeter.version}.zip"
                                      dest="${project.build.directory}"/>
                                 <unzip src="${project.build.directory}/apache-jmeter-${jmeter.version}.zip"
                                        dest="${project.build.directory}"/>
@@ -156,7 +156,7 @@
                 <artifactId>bom</artifactId>
                 <type>pom</type>
                 <scope>import</scope>
-                <version>0.21.0-SNAPSHOT</version>
+                <version>0.21.0</version>
             </dependency>
 
         </dependencies>

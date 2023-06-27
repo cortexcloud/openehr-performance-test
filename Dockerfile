@@ -1,12 +1,12 @@
-FROM eclipse-temurin:11-jre-alpine
+FROM openjdk:11.0.15-jre
 
-RUN apk update && \
-    apk add wget
+#RUN apk update && \
+#    apk add wget
 
 ARG JMETER_VERSION=5.4.3
 ENV JMETER_HOME /opt/apache-jmeter-${JMETER_VERSION}
 
-RUN wget https://downloads.apache.org/jmeter/binaries/apache-jmeter-${JMETER_VERSION}.tgz && \
+RUN wget https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-${JMETER_VERSION}.tgz && \
     tar -xzf /apache-jmeter-${JMETER_VERSION}.tgz -C /opt && \
     rm apache-jmeter-${JMETER_VERSION}.tgz
 
